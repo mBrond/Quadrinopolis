@@ -1,0 +1,187 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* MAIN */
+
+body {
+    background-color: rgb(124, 84, 154);
+    background-image: url(../imagens/castelo.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+    /* background-clip: border-box; */
+}
+
+.main-container {
+    margin: 0 auto;
+    padding: 0px 20px;
+    max-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 700px;
+    
+    background: linear-gradient(to bottom, rgb(81, 17, 127) 40%, rgb(219, 219, 219)40%);
+}
+
+.cadastro-obra-catalogo-container {
+    border: none;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 50px;
+    border-bottom: 1px solid rgb(96, 23, 129);
+
+}
+
+.cadastro-obra-catalogo {
+    margin: 0 auto;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.cadastro-obra-catalogo:hover {
+    color: rgb(185, 183, 183);
+}
+
+.cadastro-obra-titulo {
+    font-size: 40px;
+    color: white;
+    padding-bottom: 30px;
+}
+
+.main-form-container {
+    background-image: linear-gradient(rgb(83, 20, 127), rgb(211, 15, 131));
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.633);
+    width: 420px;
+    height: 500px;
+}
+
+
+.form-grupo {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#titulo-obra {
+    display: flex;
+    border-radius: 0px;
+    align-items: center;
+    border-bottom: 1px solid white;
+    /* background-color: antiquewhite; */
+}
+
+#titulo {
+    border-radius: 5px 0 0 5px;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+
+
+}
+
+#titulo::placeholder {
+    color: white;
+    text-align: center;
+}
+
+#titulo-selecao {
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    color: white;
+    outline: none;
+}
+
+
+.form-sinopse {
+    width: 350px;
+    /* background-color: blue; */
+    margin: 0 auto;
+}
+
+#sinopse {
+    resize: none;
+}
+
+.form-grupo label {
+    font-size: 14px;
+    display: block;
+    color: white;
+    text-align: start;
+    margin-bottom: 8px;
+}
+
+#capitulo-label {
+    text-align: center;
+}
+#capitulo{
+    width: 55px;
+    text-align: center;
+}
+
+.form-grupo input[type="text"],
+.form-grupo textarea {
+    width: 100%;
+    padding: 10px;  
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.form-grupo .arrastar-arquivo {
+    border: 2px solid white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.form-grupo .arrastar-arquivo:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.main-botao-container {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit-btn {
+    background: linear-gradient(to right, #5e2b86, #e84180);
+    color: white;
+    padding: 12px 45px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.8s;
+}
+
+.submit-btn:hover {
+    /* background: rgb(67, 67, 67); */
+    background: rgb(185, 183, 183);
+    color: black;
+
+}

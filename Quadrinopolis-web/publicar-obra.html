@@ -1,0 +1,62 @@
+h
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar Obra</title>
+    <link rel="stylesheet" href="style/publicar-obra.css">
+</head>
+
+<body>
+    <main class="main-container">
+        <div class="cadastro-obra-catalogo-container">
+            <a href="catalogo.html" class="cadastro-obra-catalogo">
+                <span>Catálogo</span>
+            </a>
+        </div>
+
+        <div class="cadastro-obra-titulo">
+            <span>Cadastro Obra</span>
+        </div>
+
+        <form>
+            <div class="main-form-container">
+                <div class="form-grupo" id="titulo-obra">
+                    <input type="text" id="titulo" placeholder="Título" required>
+                    <select name="" id="titulo-selecao"></select>
+                </div>
+                <div class="form-grupo form-sinopse">
+                    <textarea id="sinopse" rows="4" placeholder="Sinopse" required></textarea>
+                </div>
+
+
+                <div class="form-grupo">
+                    <label for="capa">Capa</label>
+                    <div class="arrastar-arquivo" id="capa">
+                        <span>Arraste aqui</span>
+                    </div>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="conteudo">Conteúdo</label>
+                    <div class="arrastar-arquivo" id="conteudo">
+                        <span>Arraste aqui - PDF</span>
+                    </div>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="capitulo" id="capitulo-label">Capítulo</label>
+                    <input type="number" id="capitulo" value="1" min="1" required>
+                </div>
+            </div>
+            </div>
+            <div class="main-botao-container">
+                <button type="submit" class="submit-btn">ENVIAR</button>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
