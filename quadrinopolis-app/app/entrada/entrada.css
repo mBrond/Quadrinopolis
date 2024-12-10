@@ -1,0 +1,178 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* MAIN */
+
+body{
+    background-color: rgb(124, 84, 154) ;
+    background-image: url(/images/castelo.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+    /* background-clip: border-box; */
+}
+
+.main-container {
+    margin: 0 auto;
+    padding: 0px 20px;
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 700px;
+}
+
+.main-logo-container {
+    /* background-color: brown; */
+    max-width: 800px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-logo-tipo {
+    color: white;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 40px;
+}
+
+.main-entrar-contatiner {
+    background-color: rgb(245, 245, 245);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.633);
+    width: 420px;
+    height: 500px;
+}
+
+.main-entrar-bem-vindo {
+    background-image: linear-gradient(rgb(106, 30, 130), rgb(208, 18, 132));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+.main-entrar-bem-vindo p {
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.main-entrar-estrada-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aqua; */
+    min-height: 250px;
+}
+
+
+.main-entrar-estrada-container input {
+    display: flex;
+    align-items: center;
+    width: 320px;
+    margin: 5px;
+    padding: 10px 20px;
+    height: 50px;
+    /* Espaçamento interno (superior/inferior e laterais) */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-color: rgb(127, 127, 127);
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    /* Remove o contorno ao clicar */
+    
+    color: white;
+}
+.main-entrar-estrada-container input::placeholder {
+    color: rgba(255, 255, 255, 0.647);
+}
+
+.main-entrar-entrada-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 40px 0;
+    /* height: 500px; */
+    justify-content: center;
+}
+
+.main-entrar-estrada-container button {
+    width: 250px;
+    height: 45px;
+    margin-top: 50px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 20px;
+    background-image: linear-gradient(rgb(106, 30, 130), rgb(208, 18, 132));
+    font-size: 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-top: 40px;
+    text-transform: uppercase;
+}
+
+.main-entrar-entrada-registro {
+    width: 190px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-entrar-entrada-registro p {
+    color: hsl(0, 0%, 43%);
+}
+
+.main-entrar-entrada-registro a {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+    color: rgb(124, 84, 154)
+}
+
+.cabecario-entrar a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-catalogo-container{
+    border:none;
+    width: 190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    /* background-color: blueviolet; */
+    height: 50px;
+    border-bottom: 1px solid white;
+}
+
+.footer-catalogo{
+    margin: 0 auto;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-catalogo:hover{
+    color: rgb(185, 183, 183);
+}

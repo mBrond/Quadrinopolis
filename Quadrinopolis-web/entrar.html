@@ -9,32 +9,39 @@ h<!DOCTYPE html>
 </head>
 
 <body>
-    <main class="main-container">
-        <div class="main-logo-container">
-            <div class="main-logo-tipo">Quadrinópolis</div>
-        </div>
-        <div class="main-entrar-contatiner">
-            <div class="main-entrar-bem-vindo">
-                <p>Bem Vindo!</p>
-            </div>
-            <div class="main-entrar-estrada-container">
-                <form action="" method="get" class="main-entrar-entrada-form">
-                    <input type="text" name="usuario" id="usuario" placeholder="Usúario">
-                    <input type="password" name="senha" id="senha" placeholder="Senha">
-                    <button type="submit">Entrar</button>
-                </form>
-                <div class="main-entrar-entrada-registro">
-                    <p>Não possui cadastro?</p>
-                    <a href="registrar.html">Registrar</a>
+    <Head>
+                <title>Entrar</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            </Head>
+            <main className="main-container">
+                <div className="main-logo-container">
+                    <div className="main-logo-tipo">Quadrinópolis</div>
                 </div>
-            </div>
-        </div>
-        <div class="footer-catalogo-container">
-            <a href="catalogo.html" class="footer-catalogo">
-                <div>Catálogo</div>
-            </a>
-        </div>
-    </main>
+                <div className="main-entrar-container">
+                    <div className="main-entrar-bem-vindo">
+                        <p>Bem Vindo!</p>
+                    </div>
+                    <div className="main-entrar-estrada-container">
+                        <form action="" method="get" className="main-entrar-entrada-form">
+                            <input type="text" name="usuario" id="usuario" placeholder="Usuário" />
+                            <input type="password" name="senha" id="senha" placeholder="Senha" />
+                            <button type="submit">Entrar</button>
+                        </form>
+                        <div className="main-entrar-entrada-registro">
+                            <p>Não possui cadastro?</p>
+                            <Link href="/registrar">
+                                Registrar
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+                <div className="footer-catalogo-container">
+                    <Link href="/catalogo">
+                        <div className="footer-catalogo">Catálogo</div>
+                    </Link>
+                </div>
+            </main>
+        </>
 </body>
 
 </html>

@@ -32,3 +32,206 @@ body {
 .dropzone:hover {
   background-color: #f0f0f0;
 }
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* HEADER */
+.header-container {
+    background-image: linear-gradient(rgb(106, 30, 130), rgb(208, 18, 132));
+    height: 100px;
+    margin: 0px;
+    display: flex;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.516);
+}
+
+.header {
+    margin: 0 auto;
+    padding: 0px 20px;
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.header h1 {
+    color: white;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.header-entrar {
+    background-color: pink;
+    width: 100px;
+    height: 30px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 20px;
+    background-color: transparent;
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-entrar a {
+    text-decoration: none;
+    color: white;
+}
+
+.header-entrar:hover {
+    background-color: rgba(255, 255, 255, 0.33);
+}
+
+
+/* MAIN */
+
+/* main-CATALOGO-HEADER -> PESQUISAR E LOGO OBRAS */
+/* CONTAINER*/
+.main-pesquisar-container {
+    /* background-color: rgb(43, 226, 92); */
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 0px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    max-width: 800px;
+    /* height: 500px; */
+    /* box-shadow: 0px 0px 10px black; */
+    justify-content: space-between;
+}
+
+/* CONTAINER = OBRAS + LIVRINHO */
+.main-pesquisar-logo-obra {
+    /* background-color: black; */
+    display: flex;
+    align-items: center;
+}
+
+.main-pesquisar-livrinho-obra {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.main-pesquisar-logo-obra p {
+    color: rgb(81, 17, 127);
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CONTAINER = PESQUISAR + LUPA */
+.main-pesquisar-pesquisa {
+    /* background-color: black; */
+    align-self: center;
+}
+
+.main-pesquisar-pesquisa-barra-pesquisa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #ccc; */
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.436);
+}
+
+.main-pesquisar-pesquisa-barra-pesquisa input {
+    outline: none;
+    border: none;
+}
+
+.main-pesquisar-pesquisa-lupa-pesquisar {
+    padding-left: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.main-pesquisar-pesquisa-lupa-botao {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* CATALOGO OBRAS */
+
+.main-catalogo-container {
+    max-width: 700px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    justify-content: space-around;
+}
+
+.link-obra{
+    display:block;
+    width: 210px;
+    height: 300px;
+    padding: 10px;
+
+}
+.main-catalogo-imagem {
+    width: 210px;
+    height: 300px;
+    margin-bottom: 40px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.595);
+    transition: box-shadow 0.3s;
+}
+
+.main-catalogo-imagem:hover {
+    box-shadow: 0px 0px 50px blueviolet;
+    cursor: pointer;
+}
+
+
+/* Publicar Obra */
+.main-publicar-container {
+
+    max-width: 800px;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-publicar-link {
+    display: block;
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    border: 5px solid blueviolet;
+    text-decoration: none;
+    color: blueviolet;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    transition: background-color 0.5s;
+}
+
+.main-publicar-link:hover {
+    background-color: rgb(237, 236, 236);
+}
+
+/* FOOTER */
+.footer-logo-container {
+    max-width: 800px;
+    height: 150px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo-tipo {
+    color: blueviolet;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 40px;
+}
