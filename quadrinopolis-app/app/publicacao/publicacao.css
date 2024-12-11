@@ -1,57 +1,46 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-
-
 /* MAIN */
-
 body {
     background-color: rgb(124, 84, 154);
     background-image: url(/images/castelo.jpg);
-    background-position: center center;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
-
-    /* background-clip: border-box; */
 }
 
 .main-container {
     margin: 0 auto;
-    padding: 0px 20px;
+    padding: 20px;
     max-width: 600px;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 700px;
-    
-    background: linear-gradient(to bottom, rgb(81, 17, 127) 40%, rgb(219, 219, 219)40%);
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgba(81, 17, 127, 0.8) 40%, rgba(219, 219, 219, 0.8) 40%);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .cadastro-obra-catalogo-container {
-    border: none;
-    width: 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    height: 50px;
-    border-bottom: 1px solid rgb(96, 23, 129);
-
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .cadastro-obra-catalogo {
-    margin: 0 auto;
     font-size: 20px;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
+    transition: color 0.3s;
 }
 
 .cadastro-obra-catalogo:hover {
@@ -59,129 +48,137 @@ body {
 }
 
 .cadastro-obra-titulo {
-    font-size: 40px;
+    font-size: 36px;
     color: white;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 .main-form-container {
-    background-image: linear-gradient(rgb(83, 20, 127), rgb(211, 15, 131));
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.633);
-    width: 420px;
-    height: 500px;
+    background: linear-gradient(rgb(83, 20, 127), rgb(211, 15, 131));
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
 }
-
 
 .form-grupo {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
     margin-bottom: 20px;
-    text-align: center;
-}
+    text-align: center}
 
-#titulo-obra {
-    display: flex;
-    border-radius: 0px;
-    align-items: center;
-    border-bottom: 1px solid white;
-    /* background-color: antiquewhite; */
-}
-
-#titulo {
-    border-radius: 5px 0 0 5px;
-    background-color: transparent;
-    color: white;
-    text-align: center;
-
-
-}
-
-#titulo::placeholder {
-    color: white;
-    text-align: center;
-}
-
-#titulo-selecao {
-    border-bottom: 1px solid white;
-    background-color: transparent;
-    border-radius: 0 5px 5px 0;
-    border: none;
-    color: white;
-    outline: none;
-}
-
-
-.form-sinopse {
-    width: 350px;
-    /* background-color: blue; */
-    margin: 0 auto;
-}
-
-#sinopse {
-    resize: none;
-}
-
-.form-grupo label {
-    font-size: 14px;
-    display: block;
-    color: white;
-    text-align: start;
-    margin-bottom: 8px;
-}
-
-#capitulo-label {
-    text-align: center;
-}
-#capitulo{
-    width: 55px;
-    text-align: center;
-}
-
-.form-grupo input[type="text"],
-.form-grupo textarea {
-    width: 100%;
-    padding: 10px;  
-    border-radius: 5px;
-    border: none;
-    outline: none;
-}
-
-.form-grupo .arrastar-arquivo {
-    border: 2px solid white;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    color: white;
-    cursor: pointer;
-}
-
-.form-grupo .arrastar-arquivo:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-
-.main-botao-container {
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.submit-btn {
-    background: linear-gradient(to right, #5e2b86, #e84180);
-    color: white;
-    padding: 12px 45px;
-    border: none;
-    border-radius: 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s, color 0.8s;
-}
-
-.submit-btn:hover {
-    /* background: rgb(67, 67, 67); */
-    background: rgb(185, 183, 183);
-    color: black;
-
-}
+    #titulo-obra {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid white;
+    }
+    
+    #titulo {
+        border-radius: 5px 0 0 5px;
+        background-color: transparent;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        flex: 1;
+    }
+    
+    #titulo::placeholder {
+        color: white;
+        text-align: center;
+    }
+    
+    #titulo-selecao {
+        border-bottom: 1px solid white;
+        background-color: transparent;
+        border-radius: 0 5px 5px 0;
+        border: none;
+        color: white;
+        outline: none;
+        padding: 10px;
+    }
+    
+    .form-sinopse {
+        width: 100%;
+    }
+    
+    #sinopse {
+        resize: none;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .form-grupo label {
+        font-size: 14px;
+        display: block;
+        color: white;
+        text-align: start;
+        margin-bottom: 8px;
+    }
+    
+    #capitulo-label {
+        text-align: center;
+    }
+    
+    #capitulo {
+        width: 55px;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .form-grupo input[type="text"],
+    .form-grupo input[type="number"],
+    .form-grupo textarea {
+        width: 100%;
+        padding: 10px;  
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .form-grupo .arrastar-arquivo {
+        border: 2px dashed white;
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+        color: white;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    
+    .form-grupo .arrastar-arquivo:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .main-botao-container {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .submit-btn {
+        background: linear-gradient(to right, #5e2b86, #e84180);
+        color: white;
+        padding: 12px 45px;
+        border: none;
+        border-radius: 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s, color 0.8s;
+    }
+    
+    .submit-btn:hover {
+        background: rgb(185, 183, 183);
+        color: black;
+    }

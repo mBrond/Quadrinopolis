@@ -2,6 +2,20 @@
 import { NextResponse } from "next/server";
 import path from "path";
 import { writeFile, mkdir, access, constants } from "fs/promises";
+import fs from 'fs'
+
+const getPdfCount = (pdfDirectory) => {
+ try {
+   const files = fs.readdirSync(pdfDirectory);
+   const pdfFiles = files.filter(file => file.endsWith('.pdf'));
+   return pdfFiles.length;
+
+ } catch (error) {
+   console.error('Error reading directory:', error);
+   return 0; // Return 0 if there's an error
+ }
+};
+
 
 // Define the POST handler for the file upload
 export const POST = async (req) => {
@@ -50,7 +64,9 @@ export const POST = async (req) => {
 
   // Process the PDF file
   const pdfBuffer = Buffer.from(await pdfFile.arrayBuffer());
-  const pdfFilename = pdfFile.name.replaceAll(" ", "_");
+
+  const pdfCount = getPdfCount(uploadDir);
+  const pdfFilename = `${pdfCount + 1}.${pdfFile.name}`;
 
   try {
     // Write the PDF file to the specified directory
