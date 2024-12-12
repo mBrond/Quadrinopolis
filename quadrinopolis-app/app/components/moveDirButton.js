@@ -22,12 +22,14 @@ const MoveDirButton = ({ dirPath }) => {
       console.error('Erro ao analisar JSON:', error);
       setMessage('Falha ao analisar a resposta');
     }
+
+    window.location.reload(); 
+
   };
 
   return (
     <div>
-      <button onClick={handleMove}>APROVAR</button>
-      {message && <p>{message}</p>}
+      <button onClick={handleMove} className="botao-aceitar">APROVAR</button>
     </div>
   );
 };

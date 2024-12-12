@@ -23,12 +23,13 @@ const DeleteDirButton = ({ dirPath }) => {
       console.error('Error parsing JSON:', error);
       setMessage('Failed to parse response');
     }
+
+    window.location.reload(); 
   };
 
   return (
     <div>
-      <button onClick={handleDelete}>Delete Directory</button>
-      {message && <p>{message}</p>}
+      <button onClick={handleDelete} className="botao-rejeitar">REPROVAR</button>
     </div>
   );
 };
