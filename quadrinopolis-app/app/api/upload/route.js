@@ -35,7 +35,7 @@ export const POST = async (req) => {
 
   // Sanitize the title for folder creation
   const sanitizedTitle = titulo.replace(/[^a-z0-9]/gi, '_').toLowerCase();
-  const uploadDir = path.join(process.cwd(), "public/uploads", sanitizedTitle);
+  const uploadDir = path.join(process.cwd(), "/public/uploads/pendente", sanitizedTitle);
 
   try {
     // Check if the directory exists
