@@ -58,7 +58,7 @@ const Dropzone = ({ className }) => {
     accept: {
       'application/pdf': []
     },
-    maxSize: 1024 * 1000, // 1 MB
+    maxSize: 1024 * 1000 * 100, // 1 MB
     maxFiles: 1,
     onDrop: onPdfDrop
   })

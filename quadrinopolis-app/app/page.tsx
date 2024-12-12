@@ -1,8 +1,17 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import fs from 'fs';
+import path from 'path';
 
 export default function Catalogo() {
+
+    const uploadsPath = path.join(process.cwd(), '/public/uploads/aprovado');
+    console.log("Uploads Path: ", uploadsPath)
+    console.log('Arquivos encontrados no diretório:', fs.readdirSync(uploadsPath));
+  
+    const pdfFiles = fs.readdirSync(uploadsPath);
+    console.log(pdfFiles); 
     return (
         <>
             <Head>
@@ -51,28 +60,17 @@ export default function Catalogo() {
                 </div>
 
                 <div className="main-catalogo-container">
-                    {[
-                        'Omv.jpg',
-                        'lookism.jpg',
-                        'solo-leveling.jpg',
-                        'Omv.jpg',
-                        'lookism.jpg',
-                        'solo-leveling.jpg',
-                        'Omv.jpg',
-                        'lookism.jpg',
-                        'solo-leveling.jpg',
-                    ].map((image, index) => (
-                        <Link href="/obra" key={index} className="link-obra">
-                                <Image
-                                    src={`/images/${image}`}
-                                    alt={`obra-${index}`}
-                                    width={150}
-                                    height={200}
-                                    className="main-catalogo-imagem"
-                                />
-                        </Link>
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                     {pdfFiles.map((file) => (
+                    <li key={file} className="p-4 border rounded shadow hover:shadow-lg">
+                    <a href={`conteudo/${file}`} className="text-blue-500 hover:underline">
+                    {file.replace('.pdf', '')}
+                    </a>
+                    </li>
                     ))}
+                </ul>
                 </div>
+
 
                 <div className="main-publicar-container">
                     <Link href="/publicacao">
