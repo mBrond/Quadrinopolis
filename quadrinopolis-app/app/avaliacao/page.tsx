@@ -59,7 +59,7 @@ export default function AvaliacaoObra() {
                     </div>
                 </div>
                 <div className="catalogo-container">
-                    <Link href="/catalogo">
+                    <Link href="/">
                         Catálogo
                     </Link>
                 </div>

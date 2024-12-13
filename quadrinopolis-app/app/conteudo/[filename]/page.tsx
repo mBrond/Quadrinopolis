@@ -36,7 +36,7 @@ export default function Obra({ params }: { params: { filename: string } }) {
             <header className="header-container">
                 <div className="header">
                     <div className="logo-tipo">
-                        <Link href="/catalogo">
+                        <Link href="/">
                             
                                 <h1>Quadrinópolis</h1>
                             

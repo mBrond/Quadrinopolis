@@ -63,9 +63,11 @@ export default function Catalogo() {
                         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                      {pdfFiles.map((file) => (
                     <li key={file} className="p-4 border rounded shadow hover:shadow-lg">
-                    <a href={`conteudo/${file}`} className="text-blue-500 hover:underline">
-                    {file.replace('.pdf', '')}
-                    </a>
+                        <a href={`conteudo/${file}`} className="text-blue-500 hover:underline">{file.replace('.pdf', '')}</a>
+                        <Link href={`conteudo/${file}`}>
+                            <Image src={`/uploads/aprovado/${file}/capa.jpg`} width={150} height={200}/>
+                        </Link>
+                        <a>{`public/uploads/aprovado/${file}/capa.jpg`}</a>
                     </li>
                     ))}
                 </ul>

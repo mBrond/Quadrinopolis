@@ -13,7 +13,7 @@ export default function PublicarObra() {
             <main className="main-container">
                 {/* Link para o catálogo */}
                 <div className="cadastro-obra-catalogo-container">
-                    <Link href="/catalogo" className="cadastro-obra-catalogo">
+                    <Link href="/" className="cadastro-obra-catalogo">
                         Catálogo
                     </Link>
                 </div>
