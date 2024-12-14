@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import fs from 'fs';
 import path from 'path';
+import "./catalogo.css";
 
 export default function Catalogo() {
 
@@ -65,9 +66,8 @@ export default function Catalogo() {
                     <li key={file} className="p-4 border rounded shadow hover:shadow-lg">
                         <a href={`conteudo/${file}`} className="text-blue-500 hover:underline">{file.replace('.pdf', '')}</a>
                         <Link href={`conteudo/${file}`}>
-                            <Image src={`/uploads/aprovado/${file}/capa.jpg`} width={150} height={200}/>
+                            <Image alt="image" src={`/uploads/aprovado/${file}/capa.jpg`} width={150} height={200}/>
                         </Link>
-                        <a>{`public/uploads/aprovado/${file}/capa.jpg`}</a>
                     </li>
                     ))}
                 </ul>

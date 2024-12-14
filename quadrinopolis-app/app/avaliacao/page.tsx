@@ -7,11 +7,16 @@ import { GetStaticProps } from 'next';
 import DeleteDirButton  from '../components/deleteDir'
 import MoveDirButton from '../components/moveDirButton'
 import DownloadButton from '../components/DownloadButton'
+import { useSession } from "next-auth/react";
 
 
 export default function AvaliacaoObra() {
     const [folders, setFolders] = useState([]);
     const [error, setError] = useState(null);
+
+    const { data: session } = useSession();
+
+
     useEffect(() => {
         const fetchFolders = async () => {
           try {
@@ -35,8 +40,10 @@ export default function AvaliacaoObra() {
 
     return (
         <main className="main-container">
-            <div className="main">
+            {session?.user.name == "admin"?(
+                <div className="main">
                 <div className="titulo">
+                    <p>Bem vindo {session?.user.name} </p>
                     <h1>Avaliação obra</h1>
                 </div>
                 <div className="subtitulo">
@@ -64,6 +71,10 @@ export default function AvaliacaoObra() {
                     </Link>
                 </div>
             </div>
+            ):(
+                <p>Apenas admins podem acesar essa pagina</p>
+            )}
+            
         </main>
     );
 }

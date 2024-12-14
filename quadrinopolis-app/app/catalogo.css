@@ -1,27 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+* {
+    margin: 0px;
+    padding: 0px;
 }
-
-.dropzone {
-  border: 2px dashed #0070f3;
-  border-radius: 4px;
-  padding: 20px;
-  text-align: center;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.dropzone:hover {
-  background-color: #f0f0f0;
-}
-
 
 /* HEADER */
 .header-container {
