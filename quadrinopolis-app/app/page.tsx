@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import fs from 'fs';
 import path from 'path';
+import "./catalogo.css";
 
 export default function Catalogo() {
 
@@ -63,9 +64,9 @@ export default function Catalogo() {
                     {/* grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 */}
                      {pdfFiles.map((file) => (
                     <li key={file} className="main-catalogo-imagem">
-                        {/* <a href={`conteudo/${file}`} className="text-blue-500 hover:underline">{file.replace('.pdf', '')}</a> */}
-                        <Link href={`conteudo/${file}`}>
-                            <Image src={`/uploads/aprovado/${file}/capa.jpg`} width={210} height={320} className='link-obra'/>
+
+                        <Link href={`conteudo/${file}`} className='link-obra' >
+                            <Image src={`/uploads/aprovado/${file}/capa.jpg`} width={210} height={300} alt={`imagem${file}`}/>
                         </Link>
                     </li>
                     ))}
@@ -78,6 +79,7 @@ export default function Catalogo() {
                     </Link>
                 </div>
                 <div className="footer-logo-container">
+                    {/* <Link href="/avaliacao">Avaliar Obra</Link> */}
                     <div className="footer-logo-tipo">Quadrinópolis</div>
                 </div>
             </main>

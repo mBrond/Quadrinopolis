@@ -1,60 +1,7 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  font-family: Arial, Helvetica, sans-serif;
+* {
+    margin: 0px;
+    padding: 0px;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-
-.body-catalogo{
-    background-color: white;
-
-}
-
-.main-container {
-    margin: 0 auto;
-    padding: 0px 20px;  
-    max-width: 500px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    max-height: 700px;
-}
-
-.body-imagem{
-    background-color: rgb(124, 84, 154) ;
-    background-image: url('/images/castelo.jpg');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-
-.dropzone {
-  border: 2px dashed #0070f3;
-  border-radius: 4px;
-  padding: 20px;
-  text-align: center;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.dropzone:hover {
-  background-color: #f0f0f0;
-}
-
 
 /* HEADER */
 .header-container {
@@ -189,16 +136,15 @@
     display:block;
     width: 210px;
     height: 300px;
-    /* padding: 10px; */
-    background-color: rgb(255, 255, 255);
+    padding: 10px;
 
 }
 .main-catalogo-imagem {
     width: 210px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.595);
-    height: 400px;
+    height: 300px;
     margin-bottom: 40px;
     border-radius: 3px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.595);
     transition: box-shadow 0.3s;
 }
 
@@ -219,25 +165,6 @@
     justify-content: center;
 }
 
-.main-container-cont {
-    margin: 0 auto;
-    padding: 0px 20px;
-    max-width: 700px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 700px;
-    background-color: rgb(70, 31, 107);
-    background: linear-gradient(to bottom, rgb(81, 17, 127) 50%, rgb(219, 219, 219)50%);
-
-}
-
-a{
-    text-decoration: none;
-}
-
 .main-publicar-link {
     display: block;
     background-color: white;
@@ -252,7 +179,6 @@ a{
     font-size: 30px;
     transition: background-color 0.5s;
 }
-
 
 .main-publicar-link:hover {
     background-color: rgb(237, 236, 236);
