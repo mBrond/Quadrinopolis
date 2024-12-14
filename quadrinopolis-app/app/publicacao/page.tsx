@@ -19,25 +19,16 @@ export default function PublicarObra() {
                 </div>
 
                 {/* Título da página */}
-                <h1 className="cadastro-obra-titulo">Cadastro de Obra</h1>
+                <h1 className="cadastro-obra-titulo">Publicar Obra</h1>
 
                 {/* Formulário para cadastro da obra */}
                 <div className="main-form-container">
 
                     <div className="form-grupo">
-                        <label htmlFor="conteudo">Conteúdo</label>
+                        <label htmlFor="conteudo"></label>
                         <div className="arrastar-arquivo" id="conteudo">
-                            <Dropzone className="classe" />
+                            <Dropzone className="dropzone" />
                         </div>
-                    </div>
-
-                    <div className="form-grupo">
-                        <label htmlFor="capitulo" id="capitulo-label">Capítulo</label>
-                        <input type="number" id="capitulo" value="1" min="1" required />
-                    </div>
-
-                    <div className="main-botao-container">
-                        <button type="submit" className="submit-btn">ENVIAR</button>
                     </div>
                 </div>
             </main>

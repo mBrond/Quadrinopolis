@@ -104,11 +104,37 @@ const Dropzone = ({ className }) => {
       body: formData
     })
 
-    console.log(data)
+    window.location.reload(); 
   }
 
   return (
     <form onSubmit={handleSubmit}>
+      
+
+      <div className="mt-4">
+        <label htmlFor="titulo" className="">Título:</label>
+        <textarea
+          type="text"
+          id="titulo"
+          value={titulo}
+          onChange={(e) => setTitulo(e.target.value)}
+          required
+          className=""
+        />
+      </div>
+
+      <div className="">
+        <label htmlFor="sinopse" className="">Sinopse:</label>
+        <textarea
+          id="sinopse"
+          value={sinopse}
+          onChange={(e) => setSinopse(e.target.value)}
+          required
+          className=""
+        />
+      </div>
+
+
       <div
         {...getImageRootProps({
           className: className
@@ -139,54 +165,21 @@ const Dropzone = ({ className }) => {
         </div>
       </div>
 
-      <div className="mt-4">
-        <label htmlFor="titulo" className="block text-sm font-medium text-gray-700">Título:</label>
-        <input
-          type="text"
-          id="titulo"
-          value={titulo}
-          onChange={(e) => setTitulo(e.target.value)}
-          required
-          className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50"
-        />
-      </div>
-
-      <div className="mt-4">
-        <label htmlFor="sinopse" className="block text-sm font-medium text-gray-700">Sinopse:</label>
-        <textarea
-          id="sinopse"
-          value={sinopse}
-          onChange={(e) => setSinopse(e.target.value)}
-          required
-          className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50"
-        />
-      </div>
-
       <section className='mt-10'>
-        <div className='flex gap-4'>
-          <h2 className='title text-3xl font-semibold'>Preview</h2>
-          <button
+        <button
             type='button'
             onClick={removeAll}
-            className='mt-1 text-[12px] uppercase tracking-wider font-bold text-neutral-500 border border-secondary-400 rounded-md px-3 hover:bg-secondary-400 hover:text-white transition-colors'
+            className='uppercase text-500 border border-secondary-400 rounded-md px-3 hover:bg-secondary-400 hover:bg-purple-400 transition-colors'
           >
             Remover todos os arquivos
           </button>
-          <button
-            type='submit'
-            className='ml-auto mt-1 text-[12px] uppercase tracking-wider font-bold text-neutral-500 border border-purple-400 rounded-md px-3 hover:bg-purple-400 hover:text-white transition-colors'
-          >
-            Enviar
-          </button>
-        </div>
+          
+        <h2 className='title text-3xl font-semibold'>Arquivos selecionados</h2>
 
         {/* Accepted files */}
-        <h3 className='title text-lg font-semibold text-neutral-600 mt-10 border-b pb-3'>
-          Arquivos Aceitos
-        </h3>
         <ul className='mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-10'>
           {imageFiles.map(file => (
-            <li key={file.name} className='relative h-32 rounded-md shadow-lg'>
+            <li key={file.name} className='relative h-32 rounded-md shadow-lg display:inline-block'>
               <Image
                 src={file.preview}
                 alt={file.name}
@@ -197,33 +190,24 @@ const Dropzone = ({ className }) => {
                 }}
                 className='h-full w-full object-contain rounded-md'
               />
-              <button
-                type='button'
-                className='w-7 h-7 border border-secondary-400 bg-secondary-400 rounded-full flex justify-center items-center absolute -top-3 -right-3 hover:bg-white transition-colors'
-                onClick={() => removeFile(file.name, 'image')}
-              >
-                X
-              </button>
-              <p className='mt-2 text-neutral-500 text-[12px] font-medium'>
-                {file.name}
-              </p>
             </li>
           ))}
           {pdfFiles.map(file => (
             <li key={file.name} className='relative h-32 rounded-md shadow-lg'>
               <div className='h-full w-full flex items-center justify-center bg-gray-200 rounded-md'>
-                <p className='text-neutral-500 text-[12px] font-medium'>{file.name}</p>
+                <p className='text-500 text-[12px] font-medium' >{file.name}</p>
               </div>
-              <button
-                type='button'
-                className='w-7 h-7 border border-secondary-400 bg-secondary-400 rounded-full flex justify-center items-center absolute -top-3 -right-3 hover:bg-white transition-colors'
-                onClick={() => removeFile(file.name, 'pdf')}
-              >
-                X
-              </button>
             </li>
           ))}
         </ul>
+        <li className='h-32 shadow-lg'>
+            <button
+              type='submit'
+              className='ml-auto mt-1 text-[12px] uppercase tracking-wider font-bold text-500 border border-purple-400 rounded-md px-3 hover:bg-purple-400 hover:text-white transition-colors'
+            >
+              Enviar
+            </button>
+            </li>
       </section>
     </form>
   )

@@ -75,11 +75,13 @@ body {
     
     #titulo {
         border-radius: 5px 0 0 5px;
-        background-color: transparent;
         color: white;
         text-align: center;
-        padding: 10px;
+        padding: 1px;
         flex: 1;
+        resize: none;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.1);
     }
     
     #titulo::placeholder {
@@ -109,6 +111,7 @@ body {
         outline: none;
         color: white;
         background-color: rgba(255, 255, 255, 0.1);
+        
     }
     
     .form-grupo label {
@@ -182,3 +185,7 @@ body {
         background: rgb(185, 183, 183);
         color: black;
     }
+
+.campoTexto{
+    background:yellow;
+}
