@@ -49,7 +49,7 @@ export default function Obra({ params }: { params: { filename: string } }) {
                     </div>
                 </div>
             </header>
-            <main className="main-container">
+            <main className="main-container-conteudo">
             <div className="container mx-auto p-6">
       <h1 className="text-2xl font-bold mb-4">Visualizando: {pdfFile}</h1>
       <embed

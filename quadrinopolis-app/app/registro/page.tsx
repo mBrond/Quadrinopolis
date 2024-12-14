@@ -57,7 +57,7 @@ export default function Registrar() {
         }
     }
 
-    function renderError(msg) {
+    function renderError(msg:string) {
         setError(msg);
         setTimeout(() => {
             setError('');
@@ -70,67 +70,69 @@ export default function Registrar() {
                 <title>Registrar</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Head>
-            <main className="main-container">
-                <div className="main-logo-container">
-                    <div className="main-logo-tipo">Quadrinópolis</div>
-                </div>
-                <div className="main-registrar-container">
-                    <div className="main-registrar-bem-vindo">
-                        <p>Bem-vindo!</p>
+            <body className='body-imagem'>
+                <main className="main-container">
+                    <div className="main-logo-container">
+                        <div className="main-logo-tipo">Quadrinópolis</div>
                     </div>
-                    <div className="main-registrar-estrada-container">
-                        <form
-                            onSubmit={handleSubmit}
-                            className="main-registrar-registro-form"
-                        >
-                            <p className="criar-conta">Criar Conta</p>
-                            {error && <p className="error-message">{error}</p>}
-                            <input
-                                type="text"
-                                name="name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                required
-                                id="usuario-registro"
-                                placeholder="Usuário"
-                            />
-                            <input
-                                type="password"
-                                name="password"
-                                value={formData.password}
-                                onChange={handleChange}
-                                required
-                                id="senha-registro"
-                                placeholder="Senha"
-                            />
-                            <input
-                                type="password"
-                                name="confirmPassword"
-                                value={formData.confirmPassword}
-                                onChange={handleChange}
-                                required
-                                id="senha-registro2"
-                                placeholder="Confirmar Senha"
-                            />
-                            <button
-                                type="submit"
-                                disabled={isFormSubmitting}
-                            >
-                                {isFormSubmitting ? 'Carregando...' : 'Registrar'}
-                            </button>
-                        </form>
-                        <div className="main-registrar-registro-entrada">
-                            <p>Já possui cadastro?</p>
-                            <Link href="/entrada">Entrar</Link>
+                    <div className="main-registrar-container">
+                        <div className="main-registrar-bem-vindo">
+                            <p>Bem-vindo!</p>
+                        </div>
+                        <div className="main-registrar-estrada-container">
+                            <form
+                                onSubmit={handleSubmit}
+                                className="main-registrar-registro-form"
+                                >
+                                <p className="criar-conta">Criar Conta</p>
+                                {error && <p className="error-message">{error}</p>}
+                                <input
+                                    type="text"
+                                    name="name"
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    required
+                                    id="usuario-registro"
+                                    placeholder="Usuário"
+                                    />
+                                <input
+                                    type="password"
+                                    name="password"
+                                    value={formData.password}
+                                    onChange={handleChange}
+                                    required
+                                    id="senha-registro"
+                                    placeholder="Senha"
+                                    />
+                                <input
+                                    type="password"
+                                    name="confirmPassword"
+                                    value={formData.confirmPassword}
+                                    onChange={handleChange}
+                                    required
+                                    id="senha-registro2"
+                                    placeholder="Confirmar Senha"
+                                    />
+                                <button
+                                    type="submit"
+                                    disabled={isFormSubmitting}
+                                    >
+                                    {isFormSubmitting ? 'Carregando...' : 'Registrar'}
+                                </button>
+                            </form>
+                            <div className="main-registrar-registro-entrada">
+                                <p>Já possui cadastro?</p>
+                                <Link href="/entrada">Entrar</Link>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="footer-catalogo-container">
-                    <Link href="/">
-                        <div className="footer-catalogo">Catálogo</div>
-                    </Link>
-                </div>
-            </main>
+                    <div className="footer-catalogo-container">
+                        <Link href="/">
+                            <div className="footer-catalogo">Catálogo</div>
+                        </Link>
+                    </div>
+                </main>
+            </body>
         </>
     );
 }

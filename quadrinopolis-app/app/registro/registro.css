@@ -8,7 +8,7 @@
 
 /* MAIN */
 
-body{
+/* .body-registro{
     background-color: rgb(124, 84, 154) ;
     background-image: url(/images/castelo.jpg);
     background-position: center center;
@@ -16,13 +16,13 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
 
-
+} 
     /* background-clip: border-box; */
-}
+
 
 .main-container {
     margin: 0 auto;
-    padding: 0px 20px;
+    padding: 0px 20px;  
     max-width: 500px;
     display: flex;
     flex-wrap: wrap;
@@ -71,7 +71,9 @@ body{
 }
 
 .main-registrar-estrada-container {
+    background-color: white;
     display: flex;
+    width: 450px;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
@@ -129,6 +131,7 @@ body{
 }
 
 .main-registrar-registro-form {
+    background-color: white;
     display: flex;
     flex-wrap: wrap;
     align-items: center;

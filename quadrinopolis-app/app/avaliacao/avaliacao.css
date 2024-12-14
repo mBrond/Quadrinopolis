@@ -8,7 +8,7 @@
 
 /* MAIN */
 
-body {
+/* body {
     background-color: rgb(124, 84, 154);
     background-image: url(/images/castelo.jpg);
     background-position: center center;
@@ -16,9 +16,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 
-
-    /* background-clip: border-box; */
-}
+} */
 
 .main-container {
     margin: 0 auto;

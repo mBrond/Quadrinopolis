@@ -1,10 +1,11 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,11 +15,32 @@
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+
+.body-catalogo{
+    background-color: white;
+
 }
+
+.main-container {
+    margin: 0 auto;
+    padding: 0px 20px;  
+    max-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-height: 700px;
+}
+
+.body-imagem{
+    background-color: rgb(124, 84, 154) ;
+    background-image: url('/images/castelo.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 
 .dropzone {
   border: 2px dashed #0070f3;
@@ -171,7 +193,7 @@ body {
     display:block;
     width: 210px;
     height: 300px;
-    padding: 10px;
+    /* padding: 10px; */
 
 }
 .main-catalogo-imagem {
@@ -200,6 +222,25 @@ body {
     justify-content: center;
 }
 
+.main-container-cont {
+    margin: 0 auto;
+    padding: 0px 20px;
+    max-width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 700px;
+    background-color: rgb(70, 31, 107);
+    background: linear-gradient(to bottom, rgb(81, 17, 127) 50%, rgb(219, 219, 219)50%);
+
+}
+
+a{
+    text-decoration: none;
+}
+
 .main-publicar-link {
     display: block;
     background-color: white;
@@ -214,6 +255,7 @@ body {
     font-size: 30px;
     transition: background-color 0.5s;
 }
+
 
 .main-publicar-link:hover {
     background-color: rgb(237, 236, 236);

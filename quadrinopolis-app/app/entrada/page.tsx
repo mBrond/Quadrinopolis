@@ -59,47 +59,49 @@ export default function Entrar() {
                 <title>Entrar</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Head>
-            <main className="main-container">
-                <div className="main-logo-container">
-                    <div className="main-logo-tipo">Quadrinópolis</div>
-                </div>
-                <div className="main-entrar-container">
-                    <div className="main-entrar-bem-vindo">
-                        <p>Bem Vindo!</p>
+            <body className='body-imagem'>
+                <main className="main-container">
+                    <div className="main-logo-container">
+                        <div className="main-logo-tipo">Quadrinópolis</div>
                     </div>
-                    <div className="main-entrar-estrada-container">
-                        <form onSubmit={handleSubmit} className="main-entrar-entrada-form">
-                            <input
-                                type="text"
-                                name="usuario"
-                                id="usuario"
-                                placeholder="Usuário"
-                                required
-                            />
-                            <input
-                                type="password"
-                                name="senha"
-                                id="senha"
-                                placeholder="Senha"
-                                required
-                            />
-                            {error && <p className="error-message">{error}</p>} {/* Exibe a mensagem de erro */}
-                            <button type="submit" disabled={isFormSubmitting}>
-                                {isFormSubmitting ? "Carregando..." : "Entrar"}
-                            </button>
-                        </form>
-                        <div className="main-entrar-entrada-registro">
-                            <p>Não possui cadastro?</p>
-                            <Link href="/registro">Registrar</Link>
+                    <div className="main-entrar-container">
+                        <div className="main-entrar-bem-vindo">
+                            <p>Bem Vindo!</p>
+                        </div>
+                        <div className="main-entrar-estrada-container">
+                            <form onSubmit={handleSubmit} className="main-entrar-entrada-form">
+                                <input
+                                    type="text"
+                                    name="usuario"
+                                    id="usuario"
+                                    placeholder="Usuário"
+                                    required
+                                    />
+                                <input
+                                    type="password"
+                                    name="senha"
+                                    id="senha"
+                                    placeholder="Senha"
+                                    required
+                                    />
+                                {error && <p className="error-message">{error}</p>} {/* Exibe a mensagem de erro */}
+                                <button type="submit" disabled={isFormSubmitting}>
+                                    {isFormSubmitting ? "Carregando..." : "Entrar"}
+                                </button>
+                            </form>
+                            <div className="main-entrar-entrada-registro">
+                                <p>Não possui cadastro?</p>
+                                <Link href="/registro">Registrar</Link>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="footer-catalogo-container">
-                    <Link href="/">
-                        <div className="footer-catalogo">Catálogo</div>
-                    </Link>
-                </div>
-            </main>
+                    <div className="footer-catalogo-container">
+                        <Link href="/">
+                            <div className="footer-catalogo">Catálogo</div>
+                        </Link>
+                    </div>
+                </main>
+            </body>
         </>
     );
 }
